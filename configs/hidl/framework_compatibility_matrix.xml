@@ -39,22 +39,6 @@
 	</interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>android.hardware.bluetooth.audio</name>
-        <version>2.0-1</version>
-        <interface>
-            <name>IBluetoothAudioProvidersFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.bluetooth.audio</name>
-        <version>4</version>
-        <interface>
-            <name>IBluetoothAudioProviderFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
 	<name>android.hardware.camera.provider</name>
 	<version>2.0-4</version>
 	<interface>
