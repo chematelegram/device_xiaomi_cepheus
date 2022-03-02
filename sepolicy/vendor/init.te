@@ -13,3 +13,5 @@ allow init vendor_sysfs_graphics:file rw_file_perms;
 
 # Allow init to write to sysfs_battery_supply
 allow init vendor_sysfs_battery_supply:file { setattr };
+
+set_prop(vendor_init, vendor_power_prop)
