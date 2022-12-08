@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/spark_cepheus.mk
+    $(LOCAL_DIR)/aicp_cepheus.mk
 
 COMMON_LUNCH_CHOICES := \
-    spark_cepheus-user \
-    spark_cepheus-userdebug \
-    spark_cepheus-eng
+    aicp_cepheus-user \
+    aicp_cepheus-userdebug \
+    aicp_cepheus-eng
