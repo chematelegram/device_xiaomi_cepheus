@@ -184,6 +184,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
 
+#GApps
+ifeq ($(WITH_GAPPS), true)
+$(call inherit-product, vendor/gms/products/gms.mk)
+include vendor/gms/products/board.mk
+endif
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
