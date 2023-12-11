@@ -426,10 +426,6 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-vendorcompat \
     libprotobuf-cpp-full-vendorcompat
 
-# RemovePackages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
 # Screen density
 TARGET_SCREEN_DENSITY := 440
 
