@@ -97,16 +97,18 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0 \
+    android.frameworks.displayservice@1.0.vendor \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64
-
-PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
     libdng_sdk.vendor \
     libgui_vendor \
     libpiex \
     libpng.vendor \
+    libshim_megvii \
     libstdc++_vendor \
+    libutilscallstack.vendor:64 \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
@@ -144,14 +146,17 @@ PRODUCT_PACKAGES += \
     hwcomposer.msmnile \
     libdisplayconfig.qti \
     libdisplayconfig.system.qti \
+    libion.vendor \
     libqdMetaData \
     libqdMetaData.system \
     libqdutils \
+    libsdmcore \
     libtinyxml \
     memtrack.msmnile \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor
@@ -227,8 +232,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbatching \
     libgeofencing \
-    libgnss \
-    libsensorndkbridge
+    libgnss
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
@@ -242,8 +246,13 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
-# HIDL Transport
+# HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0.vendor \
+    android.hidl.manager@1.0 \
+    android.hidl.manager@1.0.vendor \
+    libhidlmemory.vendor:64 \
     libhidltransport \
     libhidltransport.vendor
 
@@ -425,10 +434,18 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat
 
+# QMI
+PRODUCT_PACKAGES += \
+    libcurl.vendor:64 \
+    libjson \
+    libjsoncpp.vendor \
+    libqti_vndfwk_detect.vendor \
+    libsqlite.vendor:64
+
 # QTI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
-    libsqlite.vendor 
+    libsqlite.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist.xml \
@@ -445,10 +462,11 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
-    libjson \
+    libnetutils.vendor \
     libril \
     librilutils \
     librmnetctl \
+    libsqlite.vendor \
     libxml2
 
 PRODUCT_PACKAGES += \
@@ -460,8 +478,12 @@ TARGET_SCREEN_DENSITY := 440
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
+    libdumpstateutil.vendor:64 \
+    libpower.vendor \
+    libsensorndkbridge \
     vendor.qti.hardware.display.mapper@1.1.vendor
 
 PRODUCT_COPY_FILES += \
@@ -564,6 +586,8 @@ PRODUCT_PACKAGES += \
     hostapd \
     ipacm \
     IPACM_cfg.xml \
+    libpng.vendor:32 \
+    libprocessgroup.vendor:32 \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
     libwpa_client \
