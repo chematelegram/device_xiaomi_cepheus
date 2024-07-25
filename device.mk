@@ -30,9 +30,6 @@ $(call inherit-product, vendor/xiaomi/cepheus/cepheus-vendor.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-# Call the MiuiCamera setup
-$(call inherit-product-if-exists, vendor/xiaomi/cepheus-miuicamera/config.mk)
-
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
@@ -337,6 +334,11 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
+
+# MiuiCamera
+TARGET_CAMERA_PACKAGE_NAME := com.android.camera
+TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
 
 # Network
 PRODUCT_PACKAGES += \
