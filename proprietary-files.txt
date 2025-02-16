@@ -53,7 +53,6 @@ vendor/firmware/tas2557_uCDSP_goer.bin
 vendor/lib/hw/audio.primary.msmnile.so:vendor/lib/hw/audio.primary.cepheus.so;FIX_SONAME
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib/vndk/libxlog.so
-vendor/lib/liba2dpoffload.so:vendor/lib/liba2dpoffload_cepheus.so;FIX_SONAME
 vendor/lib/libadm.so
 vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioconfigstore.so
@@ -64,6 +63,16 @@ vendor/lib/libhdmipassthru.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
+
+# Audio extensions
+vendor/lib/liba2dpoffload.so:vendor/lib/liba2dpoffload_cepheus.so;FIX_SONAME
+vendor/lib/libbatterylistener.so
+vendor/lib/libcomprcapture.so
+vendor/lib/libexthwplugin.so
+vendor/lib/libhdmiedid.so
+vendor/lib/libhfp.so
+vendor/lib/libsndmonitor.so
+vendor/lib/libspkrprot.so
 
 # Camera
 vendor/bin/remosaic_daemon

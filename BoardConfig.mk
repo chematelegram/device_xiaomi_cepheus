@@ -9,6 +9,9 @@ include device/xiaomi/sm8150-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/cepheus
 
+# Audio
+TARGET_PROVIDES_AUDIO_EXTNS := true
+
 # Display
 TARGET_SCREEN_DENSITY := 440
 
