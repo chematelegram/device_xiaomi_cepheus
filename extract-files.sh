@@ -11,10 +11,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i "/seclabel u:r:batterysecret:s0/d" "${2}"
             ;;
-        vendor/lib/hw/audio.primary.cepheus.so)
-            [ "$2" = "" ] && return 0
-            sed -i "s|/vendor/lib/liba2dpoffload\.so|liba2dpoffload_cepheus\.so\x00\x00\x00\x00|g" "${2}"
-            ;;
         vendor/lib64/camera/components/com.qti.node.watermark.so)
             [ "$2" = "" ] && return 0
             grep -q "libpiex_shim.so" "${2}" || "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"

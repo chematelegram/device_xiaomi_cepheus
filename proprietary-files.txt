@@ -50,7 +50,7 @@ vendor/firmware/tas2557_uCDSP_aac.bin
 vendor/firmware/tas2557_uCDSP_goer.bin
 
 # Audio hardware
-vendor/lib/hw/audio.primary.msmnile.so:vendor/lib/hw/audio.primary.cepheus.so;FIX_SONAME
+vendor/lib/hw/audio.primary.msmnile.so
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib/vndk/libxlog.so
 vendor/lib/libadm.so
@@ -60,12 +60,13 @@ vendor/lib/libaudioparsers.so
 vendor/lib/libaudioroute_ext.so
 vendor/lib/libdrc.so
 vendor/lib/libhdmipassthru.so
+vendor/lib/libresampler.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
 
 # Audio extensions
-vendor/lib/liba2dpoffload.so:vendor/lib/liba2dpoffload_cepheus.so;FIX_SONAME
+vendor/lib/liba2dpoffload.so
 vendor/lib/libbatterylistener.so
 vendor/lib/libcomprcapture.so
 vendor/lib/libexthwplugin.so

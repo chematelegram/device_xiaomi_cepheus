@@ -1,6 +1,3 @@
-# Audio hardware
-ro.hardware.audio.primary=cepheus
-
 # Fingerprint
 persist.vendor.fingerprint.type=udfps_optical
 persist.vendor.fingerprint.sensor_location=542|2007|87
